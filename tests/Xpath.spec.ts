@@ -6,6 +6,7 @@ test('XPath Locator Examples', async ({ page }) => {
     // Example 1: Basic XPath to find logo by image alt text
     const logo = page.locator('xpath=//img[@alt="Sea Bags"]').first();
     await expect(logo).toBeVisible();
-    await page.locator('xpath=//a[@href="/collections/vintage"]').first().click();
+    await page.locator('xpath=//img[@alt="Vintage Crew Tanbark Backpack"]').first().click({ force: true });
+
     
 });
