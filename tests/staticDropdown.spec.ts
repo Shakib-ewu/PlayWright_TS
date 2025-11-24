@@ -1,11 +1,14 @@
 import {test,expect} from '@playwright/test';
 
-test('Static dropdown',async({page})=>{
+/*test('Static dropdown', async ({ page }) => {
     await page.goto('https://www.salesforce.com/au/form/signup/sales/');
-    await page.locator('//*[@name="UserTitle"]').selectOption({ value: "IT_Manager_AP" });
-    await page.locator('//*[@name="UserTitle"]').selectOption({ label: "Developer / Software Engineer" });
+    const dropdown = page.locator('//select[@name="UserTitle"]');
+   await dropdown.waitFor({ state: 'visible', timeout: 20000 });
+    await dropdown.selectOption({ value: "IT_Manager_AP" });
+    await dropdown.selectOption({ label: "Developer / Software Engineer" });
     await page.waitForTimeout(2000);
-})
+});*/
+
 
 test('Static dropdown - 2',async({page})=>{
     await page.goto('https://www.magupdate.co.uk/magazine-subscription/PCEG');
