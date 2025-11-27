@@ -10,3 +10,10 @@ await page.waitForTimeout(1000);
 
     
 });
+
+test.only('Hover Test - 2', async ({page}) => {  
+    await page.goto('https://www.flipkart.com/');
+    await page.locator("a[title='Login'] span").hover();  
+    await page.waitForTimeout(1000);
+   
+});
