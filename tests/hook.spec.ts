@@ -13,12 +13,12 @@ test.afterEach(async ({ page }) => {
 	await page.locator('#logout2').click();
 });
 
-test('Hooks demo', async ({ page }) => {
+test('@sanity Hooks demo', async ({ page }) => {
 	const products = await page.locator('.hrefch').all();
 	await expect(products).toHaveLength(9);
 });
 
-test('Add to cart', async ({ page }) => {
+test('@regression Add to cart', async ({ page }) => {
 	// set up dialog handler BEFORE clicking
 	page.on('dialog', async dialog => {
 		expect(dialog.message()).toContain('Product added');
